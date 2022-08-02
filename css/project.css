@@ -1,0 +1,61 @@
+/* サイト固有のまとまりを定義してパターン化するパーツ。案件に応じて追加。 */
+
+
+/**
+ * WelCart既存CSSのオーバーライド
+ **/
+
+
+/* ハンバーガーメニュー既存スタイル打消し */
+
+#site-navigation label span:before {
+    content: "";
+    display: block;
+    color: #fff;
+    font-family: unset;
+    font-size: unset;
+}
+
+#site-navigation label span {
+    padding: unset;
+}
+
+
+/* ポップメニューエリア調整 */
+
+header #site-navigation input#panel.on-off:checked+div.nav-menu-open,
+header #site-navigation input#panel.on-off:checked+div.header-nav-container {
+    left: auto;
+    right: 0;
+    width: 250px;
+}
+
+
+/* カートアイコン調整 */
+
+.incart-btn a {
+    left: -25px;
+}
+
+.fa-shopping-cart:before {
+    position: relative;
+    font-size: 30px;
+    color: brown;
+}
+
+
+/* カートアイコンバッジ */
+
+.incart-btn .total-quant {
+    left: 16px;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    min-width: unset;
+    max-width: unset;
+    top: -7px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

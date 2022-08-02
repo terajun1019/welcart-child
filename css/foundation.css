@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* 要素の初期化やmixinなどのベースを設定 */
+
+body {
+  /* ベースカラー */
+  --color-brown-l: #ae7876;
+  --color-brown: #972024;
+  --color-peach: #f9cfb1;
+  --color-lawn: #D0E5BD;
+  --color-aqua:#96D0C0;
+  --color-brown-d: #4f3434;
+  --color-peach-d: #ae7876;
+  --color-lawn-d: #7C7E6D;
+  --color-aqua-d:#668D82;
+  /* ベースグレー */
+  --color-gray: #888888;
+}
+
+/* サイトメインカラー */
+
+body {
+  background-color: #f3a6a3 !important;
+  font-family: "M PLUS 2", sans-serif;
+  font-size: 16pt;
+  overflow: hidden;
+  color: var(--color-brown);
+}
+
+header {
+  border-bottom: unset;
+}
+
+h1 {
+  font-size: 5vw !important;
+}
+
+h2 {
+  font-size: 4.5vw;
+}
+
+/* bootstrap的な */
+.w-5 { width: 5% !important;}
+.w-10 { width: 10% !important;}
+.w-15 { width: 15% !important;}
+.w-20 { width: 20% !important;}
+.w-25 { width: 25% !important;}
+.w-30 { width: 30% !important;}
+.w-35 { width: 35% !important;}
+.w-40 { width: 40% !important;}
+.w-45 { width: 45% !important;}
+.w-50 { width: 50% !important;}
+.w-55 { width: 55% !important;}
+.w-60 { width: 60% !important;}
+.w-65 { width: 65% !important;}
+.w-70 { width: 70% !important;}
+.w-75 { width: 75% !important;}
+.w-80 { width: 80% !important;}
+.w-85 { width: 85% !important;}
+.w-90 { width: 90% !important;}
+.w-95 { width: 95% !important;}
+.w-100 { width: 100% !important;}
+.m-5 { margin: 5vw !important;}
+.m-10 { margin: 10vw !important;}
+.m-15 { margin: 15vw !important;}
+.m-20 { margin: 20vw !important;}
+.m-25 { margin: 25vw !important;}
+.m-30 { margin: 30vw !important;}
+.m-35 { margin: 35vw !important;}
+.m-40 { margin: 40vw !important;}
+.m-45 { margin: 45vw !important;}
+.m-50 { margin: 50vw !important;}
+.m-55 { margin: 55vw !important;}
+.m-60 { margin: 60vw !important;}
+.m-65 { margin: 65vw !important;}
+.m-70 { margin: 70vw !important;}
+.m-75 { margin: 75vw !important;}
+.m-80 { margin: 80vw !important;}
+.m-85 { margin: 85vw !important;}
+.m-90 { margin: 90vw !important;}
+.m-95 { margin: 95vw !important;}
+.m-100 { margin: 100vw !important;}
+.mt-5 { margin-top: 5vw !important;}
+.mt-10 { margin-top: 10vw !important;}
+.mt-15 { margin-top: 15vw !important;}
+.mt-20 { margin-top: 20vw !important;}
+.mt-25 { margin-top: 25vw !important;}
+.mt-30 { margin-top: 30vw !important;}
+.mt-35 { margin-top: 35vw !important;}
+.mt-40 { margin-top: 40vw !important;}
+.mt-45 { margin-top: 45vw !important;}
+.mt-50 { margin-top: 50vw !important;}
+.mt-55 { margin-top: 55vw !important;}
+.mt-60 { margin-top: 60vw !important;}
+.mt-65 { margin-top: 65vw !important;}
+.mt-70 { margin-top: 70vw !important;}
+.mt-75 { margin-top: 75vw !important;}
+.mt-80 { margin-top: 80vw !important;}
+.mt-85 { margin-top: 85vw !important;}
+.mt-90 { margin-top: 90vw !important;}
+.mt-95 { margin-top: 95vw !important;}
+.mt-100 { margin-top: 100vw !important;}
+.mr-5 { margin-right: 5vw !important;}
+.mr-10 { margin-right: 10vw !important;}
+.mr-15 { margin-right: 15vw !important;}
+.mr-20 { margin-right: 20vw !important;}
+.mr-25 { margin-right: 25vw !important;}
+.mr-30 { margin-right: 30vw !important;}
+.mr-35 { margin-right: 35vw !important;}
+.mr-40 { margin-right: 40vw !important;}
+.mr-45 { margin-right: 45vw !important;}
+.mr-50 { margin-right: 50vw !important;}
+.mr-55 { margin-right: 55vw !important;}
+.mr-60 { margin-right: 60vw !important;}
+.mr-65 { margin-right: 65vw !important;}
+.mr-70 { margin-right: 70vw !important;}
+.mr-75 { margin-right: 75vw !important;}
+.mr-80 { margin-right: 80vw !important;}
+.mr-85 { margin-right: 85vw !important;}
+.mr-90 { margin-right: 90vw !important;}
+.mr-95 { margin-right: 95vw !important;}
+.mr-100 { margin-right: 100vw !important;}
+.ml-5 { margin-left: 5vw !important;}
+.ml-10 { margin-left: 10vw !important;}
+.ml-15 { margin-left: 15vw !important;}
+.ml-20 { margin-left: 20vw !important;}
+.ml-25 { margin-left: 25vw !important;}
+.ml-30 { margin-left: 30vw !important;}
+.ml-35 { margin-left: 35vw !important;}
+.ml-40 { margin-left: 40vw !important;}
+.ml-45 { margin-left: 45vw !important;}
+.ml-50 { margin-left: 50vw !important;}
+.ml-55 { margin-left: 55vw !important;}
+.ml-60 { margin-left: 60vw !important;}
+.ml-65 { margin-left: 65vw !important;}
+.ml-70 { margin-left: 70vw !important;}
+.ml-75 { margin-left: 75vw !important;}
+.ml-80 { margin-left: 80vw !important;}
+.ml-85 { margin-left: 85vw !important;}
+.ml-90 { margin-left: 90vw !important;}
+.ml-95 { margin-left: 95vw !important;}
+.ml-100 { margin-left: 100vw !important;}
+.mb-5 { margin-bottom: 5vw !important;}
+.mb-10 { margin-bottom: 10vw !important;}
+.mb-15 { margin-bottom: 15vw !important;}
+.mb-20 { margin-bottom: 20vw !important;}
+.mb-25 { margin-bottom: 25vw !important;}
+.mb-30 { margin-bottom: 30vw !important;}
+.mb-35 { margin-bottom: 35vw !important;}
+.mb-40 { margin-bottom: 40vw !important;}
+.mb-45 { margin-bottom: 45vw !important;}
+.mb-50 { margin-bottom: 50vw !important;}
+.mb-55 { margin-bottom: 55vw !important;}
+.mb-60 { margin-bottom: 60vw !important;}
+.mb-65 { margin-bottom: 65vw !important;}
+.mb-70 { margin-bottom: 70vw !important;}
+.mb-75 { margin-bottom: 75vw !important;}
+.mb-80 { margin-bottom: 80vw !important;}
+.mb-85 { margin-bottom: 85vw !important;}
+.mb-90 { margin-bottom: 90vw !important;}
+.mb-95 { margin-bottom: 95vw !important;}
+.mb-100 { margin-bottom: 100vw !important;}

@@ -1,0 +1,562 @@
+@charset "UTF-8";
+/* components */
+
+/* ハンバーガーメニュー */
+
+.c-hamburger {
+  position: relative;
+  right: 40px;
+  background-color: yellow;
+}
+
+.c-hamburger__button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+}
+
+.c-hamburger__button span,
+.c-hamburger__button span::before,
+.c-hamburger__button span::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: brown;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.c-hamburger__button span::before {
+  bottom: 8px;
+}
+
+.c-hamburger__button span::after {
+  top: 8px;
+}
+
+#site-navigation.c-hamburger
+  input.on-off:checked
+  ~ label.c-hamburger__button
+  span {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#site-navigation.c-hamburger
+  input.on-off:checked
+  ~ label.c-hamburger__button
+  span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#site-navigation.c-hamburger
+  input.on-off:checked
+  ~ label.c-hamburger__button
+  span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.c-hamburger__caption {
+  position: absolute;
+  top: 5px;
+  left: -7px;
+  font-size: 0.6em;
+  color: brown;
+}
+
+/* メニューブロック */
+
+#site-navigation.c-hamburger input.on-off ~ div.nav-menu-open {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  right: -50px;
+  background-color: white;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s ease-out;
+  box-shadow: 5px 5px 10px 0px #00000040;
+}
+
+#site-navigation.c-hamburger input.on-off:checked ~ div.nav-menu-open {
+  right: 0;
+  opacity: 1;
+  z-index: 99;
+  transition: 0.5s ease-out;
+}
+
+/* 水平線 */
+
+.c-hr__fullwidth {
+  height: 3px;
+  width: 100%;
+}
+
+.c-hr__brown {
+  background-color: brown;
+}
+
+.c-hr__lightbrown {
+  background-color: var(--color-brown-l);
+}
+
+/* ボタン */
+
+/* ボタン群コンテナ */
+
+.c-buttons > ul {
+  position: relative;
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ボタン：単体ボディ */
+
+.c-button__body,
+.c-buttons div.clay {
+  position: relative;
+  width: 18vw;
+  height: 11vw;
+  margin: 0 0.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3vw;
+}
+
+/* 色 */
+
+.azuki {
+  background-color: #ae7876;
+}
+.pink-d {
+  background-color: var(--color-brown);
+  color: white;
+}
+.peach-d {
+  background-color: var(--color-peach-d);
+  color: white;
+}
+.lawn-d {
+  background-color: var(--color-lawn-d);
+  color: white;
+}
+.aqua-d {
+  background-color: var(--color-aqua-d);
+  color: white;
+}
+.white {
+  background-color: white;
+  color: #565656;
+}
+
+/* ボタン：内部装飾　反射 */
+
+/* .c-button__body::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 50%;
+  height: 200%;
+  background: white;
+  left: -10%;
+  transform: rotateZ(14deg);
+  opacity: 0.2;
+} */
+
+/* ボタン：内部装飾　反射　ホバー時 */
+
+/* .c-button__body:hover::before {
+  width: 100%;
+  left: 0;
+  transform: rotateZ(0);
+  transition: 0.3s 0s ease-out;
+} */
+
+.c-buttons a {
+  text-decoration: none;
+}
+
+/* ボタン：内部アイコン */
+.c-button__body > img,
+.c-buttons div.clay > img {
+  height: 65%;
+  padding: 5% 0 2.5%;
+}
+
+/* ボタン：内部テキスト */
+.c-button__body > p,
+.c-buttons div.clay > p {
+  font-size: 2.5vw;
+  color: white;
+  line-height: 1;
+  height: 1.7em;
+}
+
+/* リンクボタン */
+.c-linkbutton {
+  text-decoration: none;
+}
+.c-linkbutton.clay {
+  position: relative;
+  width: 20%;
+  margin: 0 0.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 3vw;
+  text-decoration: none;
+}
+.c-linkbutton hr {
+  margin: 0;
+  width: 90%;
+  border: solid 1px var(--color-gray);
+}
+.c-linkbutton__label-jp {
+  font-size: 5vw;
+  letter-spacing: -0.2vw;
+}
+.c-linkbutton__label-en {
+  font-size: 3vw;
+  margin-top: -2vw;
+}
+
+/* ページバナー */
+.c-pagebanner__thumb-wrapper {
+  position: relative;
+  height: 35vw;
+  overflow: hidden;
+  margin: 0 5vw;
+}
+.c-pagebanner__thumb-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-aqua-d);
+  opacity: 0.5;
+  z-index: 1;
+}
+.c-pagebanner__thumb {
+  width: 100%;
+  height: auto;
+  margin-top: -25%;
+}
+.c-text__bannercaption-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 5vw;
+  letter-spacing: 0.3vw;
+  font-size: 4vw;
+  z-index: 10;
+}
+
+/* clay：ベーススタイル */
+.card {
+  --clay-shadow-outset: 3px 3px 10px 0 hsl(0deg 0% 0% / 40%);
+  --clay-shadow-inset-primary: 3px 3px 9px 0 hsl(0deg 0% 100% / 30%);
+  --clay-shadow-inset-secondary: -3px -3px 9px 0 hsl(0deg 0% 0% / 30%);
+}
+
+/* swiper */
+.swiper-tophead {
+  position: relative;
+}
+
+.swiper-wrapper {
+  padding-bottom: 5vw;
+}
+
+.swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 5px 5px 5px #00000050;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+/* swiper:navi button style */
+.c-swiper-button {
+  top: calc(50% - (15vw / 2));
+  width: 15vw;
+  height: 15vw;
+  background: rgba(255, 255, 255, 80%);
+  border-radius: 50%;
+}
+
+.c-swiper-button::after {
+  font-family: FontAwesome;
+  font-size: 15vw;
+  color: #565656;
+}
+
+.swiper-button-prev::after {
+  content: "\f104";
+}
+
+.swiper-button-next::after {
+  content: "\f105";
+}
+
+.swiper-title {
+  position: absolute;
+  bottom: 0;
+  padding-left: 2vw;
+  padding-bottom: 2vw;
+  text-align: left;
+  font-size: 7vw;
+  color: var(--color-brown);
+  line-height: 1;
+}
+
+/* コンテンツタイトル */
+
+.c-content__title {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding-top: 5vw;
+  margin-bottom: 5vw;
+}
+/* コンテンツタイトル：仕切り線 */
+.c-content__title hr {
+  margin: 0 5vw;
+  height: 1vw;
+}
+/* コンテンツタイトル：仕切り線：カラー */
+.l-content__col-pink .c-content__title hr {
+  background-color: var(--color-brown);
+}
+.l-content__col-peach .c-content__title hr {
+  background-color: var(--color-peach-d);
+}
+.l-content__col-lawn .c-content__title hr {
+  background-color: var(--color-lawn-d);
+}
+.l-content__col-aqua .c-content__title hr {
+  background-color: var(--color-aqua-d);
+}
+
+.l-content__col-peach .c-content__title {
+  border-color: var(--color-peach-d);
+  color: var(--color-peach-d);
+}
+.l-content__col-lawn .c-content__title {
+  border-color: var(--color-lawn-d);
+  color: var(--color-lawn-d);
+}
+.l-content__col-aqua .c-content__title {
+  border-color: var(--color-aqua-d);
+  color: var(--color-aqua-d);
+}
+
+.c-text__title-jp {
+  height: 7vw;
+  margin-bottom: 1vw;
+}
+
+.c-text__title-en {
+  margin-top: -1vw;
+  height: 7vw;
+}
+
+/* 商品詳細：在庫表 */
+.itemChart {
+  font-size: 4vw;
+  width: 95%;
+  height: auto;
+  margin: 0 auto;
+  padding: 1vw 3vw 5vw;
+}
+
+.itemchart-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: solid 1px;
+}
+
+.itemchart-col {
+  position: relative;
+  width: 25%;
+  padding: 0vw 1.5vw;
+}
+/* 商品詳細：在庫表：キャプション */
+.itemchart-col__tax {
+  font-size: 3vw;
+}
+.itemchart-col .skuname {
+  font-size: 80%;
+  line-height: 1.5;
+}
+
+input[id^="inCart"] {
+  width: auto;
+  height: 12vw;
+  white-space: normal;
+  font-size: 3.7vw;
+  line-height: 1.3;
+  padding: 0;
+  margin: 1vw 0;
+}
+
+.skuquantity {
+  width: 2.5em;
+}
+
+.btnspinner {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* スピナー：デフォルトのスピナーを消す */
+.itemchart__zaiko input {
+  border: 1px solid white;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  font-size: 4.5vw;
+}
+
+/* スピナー */
+.itemchart__zaiko input[type="button"] {
+  position: absolute;
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  padding: 0;
+  border-radius: 50%;
+  line-height: 1;
+  right: 1vw;
+  background-color: var(--color-brown-l);
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.itemchart__zaiko input[type="button"][value="＋"] {
+  top: -1vw;
+}
+.itemchart__zaiko input[type="button"][value="－"] {
+  bottom: -2vw;
+}
+/* 価格：セールプライス */
+.itemChart .field_cprice {
+  position: relative;
+  height: 5vw;
+  line-height: 1;
+  font-weight: bold;
+  text-align: right;
+}
+/* 価格：リストプライス */
+.itemChart .field_lprice {
+  position: relative;
+  height: 5vw;
+  line-height: 1;
+  text-align: right;
+}
+/* 価格：税込 */
+.itemChart .tax {
+  position: absolute;
+  width: 100%;
+  bottom: -2vw;
+  color: var(--color-brown);
+  font-size: x-small;
+  text-align: right;
+  line-height: 1;
+}
+/* カートに入れるボタン */
+input[type=submit].skubutton {
+  background-color: var(--color-brown-l);
+  color: white;
+  font-size: 3vw;
+}
+
+/* ********** 汎用 ********** */
+/* テキスト */
+.c-text__white {
+  color: white;
+  text-shadow: 0.2vw 0.2vw 0.3vw rgb(0 0 0 / 80%);
+}
+.c-text__brown-d {
+  color: var(--color-brown-d);
+}
+.c-text__brown {
+  color: var(--color-brown);
+}
+.c-text__brown-l {
+  color: var(--color-brown-l);
+}
+.c-text__bold {
+  font-weight: bold;
+}
+.c-text__1stbig {
+  font-size: 75%;
+}
+.c-text__1stbig::first-letter {
+  font-size: 150%;
+}
+.c-text__bottom {
+  bottom: 0;
+}
+.c-text__linethrough {
+  text-decoration: line-through;
+}
+
+/* bs的要素 */
+.mb-1 {
+  margin-bottom: 1vw !important;
+}
+.mb-2 {
+  margin-bottom: 2vw !important;
+}
+.mb-3 {
+  margin-bottom: 3vw !important;
+}
+.m-0 {
+  margin: 0 !important;
+}
+.p-0 {
+  padding: 0 !important;
+}
+/* .w-40 {
+  width: 40% !important;
+}
+.w-50 {
+  width: 50% !important;
+}
+.w-60 {
+  width: 60% !important;
+}
+.w-70 {
+  width: 70% !important;
+}
+.w-80 {
+  width: 80% !important;
+} */
+.d-flex-between {
+  justify-content: space-between !important;
+}
